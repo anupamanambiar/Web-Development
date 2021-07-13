@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <h1>Calculator</h1>
+
+  </head>
+  <body>
+    
+    <label>Input first number &nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type= "text" id="no1"> <br><br>
+   
+    <label> Input second number</label>
+    <input type="text" id="no2"> <br><br>
+    
+    <label> Select operation</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <select id="operation">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select> 
+    
+    <input type= "button" value="=" onclick="solution()">
+    
+    <br><br>
+    
+    <label> The solution is: </label><h4 id="sol"></h4>
+    
+    <script>
+        function solution(){
+      var a=document.getElementById("no1").value
+      var b=document.getElementById("no2").value
+      var c=document.getElementById("operation").value
+      
+      if (c=="+") {
+
+document.getElementById("sol").innerHTML= parseFloat(a)+parseFloat(b)
+
+}
+     else if (c=="-") {
+
+document.getElementById("sol").innerHTML= parseFloat(a)-parseFloat(b)
+
+        }
+        else if (c=="*") {
+
+document.getElementById("sol").innerHTML= parseFloat(a)*parseFloat(b)
+
+        }
+        else if (c=="/") {
+
+document.getElementById("sol").innerHTML= parseFloat(a)/parseFloat(b)
+
+        }
+    }
+      </script>
+  </body>
+</html>
